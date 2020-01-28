@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="title-container">
+        <h1 class="title">Portfolio</h1>
+    </div>
+
+    <div class="timeline">
+        <nz-timeline>
+            <nz-timeline-item *ngFor="let project of projectNames" nzColor="grey">
+                <a class="project" [routerLink]="['/project', project.name]">{{project.name}} {{project.date}}</a>
+            </nz-timeline-item>
+        </nz-timeline>
+    </div>
+</div>

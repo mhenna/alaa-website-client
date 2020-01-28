@@ -1,0 +1,66 @@
+:host {
+    background-color: white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.title-container {
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.title {
+    font-family: "Helvetica";
+    font-size: 68px;
+    text-align: center;
+}
+
+.files-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 80%;
+    align-self: center;
+    justify-content: center;
+}
+
+.files-container {
+    display: flex;
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+}
+
+.file-icon {
+    font-size: 70px;
+}
+
+.file-icon-wrapper {
+    border-radius: 10px;
+}
+
+.btn-1 {
+    margin-right: 5%;
+    text-align: center;
+    box-shadow: 3px 3px grey;
+    border-radius: 10px;
+    height: 75px;
+}
+
+.btn-3 {
+    text-align: center;
+    box-shadow: 3px 3px grey;
+    border-radius: 10px;
+    height: 75px;
+}

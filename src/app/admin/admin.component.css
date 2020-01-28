@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.form-with-model {
+    margin-top: 5%;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+}
+
+.add-file-form {
+    margin-top: 2%;
+    margin-right: 2%;
+    align-self: center;
+}

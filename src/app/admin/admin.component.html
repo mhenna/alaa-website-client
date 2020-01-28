@@ -1,0 +1,79 @@
+<div class="form-with-model">
+    <div class="add-file-form">
+        <h3>Add Model</h3>
+        <form nz-form [formGroup]="addFileForm">
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>Name</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input nz-input id="name" formControlName="name" style="width: 200px;">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>Project</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input nz-input id="project" formControlName="project" style="width: 200px;">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="24" nzFor="nickname" nzRequired>Model</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <div class="form-group">
+                        <label for="file">Choose File</label>
+                        <input type="file" id="file" (change)="handleFileInput($event.target.files); checkValid()">
+                    </div>
+                </nz-form-control>
+            </nz-form-item>
+            <button [disabled]=!valid nz-button nzType="primary" (click)="addModel()">Submit</button>
+        </form>
+    </div>
+
+    <div class="add-file-form">
+        <h3>Edit Model</h3>
+        <form nz-form [formGroup]="editFileForm">
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired>Name</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input nz-input id="name" formControlName="name" style="width: 200px;">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="24" nzFor="nickname" nzRequired>Model</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <div class="form-group">
+                        <label for="file">Choose File</label>
+                        <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+                    </div>
+                </nz-form-control>
+            </nz-form-item>
+            <button nz-button nzType="primary" (click)="editModel()">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="form-with-model">
+    <div class="add-file-form">
+        <h3>Download Model</h3>
+        <form nz-form [formGroup]="getFileForm">
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Name</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input nz-input id="name" formControlName="name" style="width: 200px;">
+                </nz-form-control>
+            </nz-form-item>
+            <button nz-button nzType="primary" (click)="getModel()">Submit</button>
+        </form>
+    </div>
+
+    <div class="add-file-form">
+        <h3>Delete Model</h3>
+        <form nz-form [formGroup]="deleteFileForm">
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Name</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input nz-input id="name" formControlName="name" style="width: 200px;">
+                </nz-form-control>
+            </nz-form-item>
+            <button nz-button nzType="primary" (click)="deleteModel()">Submit</button>
+        </form>
+    </div>
+</div>

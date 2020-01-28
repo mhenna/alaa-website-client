@@ -1,0 +1,25 @@
+<app-side-nav (projectNameChange)='handleProjectNameChange($event)'></app-side-nav>
+<div class="wrapper">
+    <div class="title-container">
+        <h1 class="title">{{projectName}}</h1>
+    </div>
+    <div class="files-wrapper" *ngFor="let files of projectFiles">
+        <div class="files-container">
+            <div class="btn-1">
+                <button class="file-icon-wrapper" (click)="downloadModel(files[0])"><i nz-icon nzType="file-pdf"
+                        nzTheme="outline" class="file-icon"></i></button>
+                <p>{{files[0].name}}</p>
+            </div>
+            <div class="btn-1" *ngIf="files.length > 1">
+                <button class="file-icon-wrapper" (click)="downloadModel(files[1])"><i nz-icon nzType="file-pdf"
+                        nzTheme="outline" class="file-icon"></i></button>
+                <p>{{files[1].name}}</p>
+            </div>
+            <div class="btn-3" *ngIf="files.length > 2">
+                <button class="file-icon-wrapper" (click)="downloadModel(files[2])"><i nz-icon nzType="file-pdf"
+                        nzTheme="outline" class="file-icon"></i></button>
+                <p>{{files[2].name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

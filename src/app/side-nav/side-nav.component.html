@@ -1,0 +1,11 @@
+<button nz-button nzType="primary" (click)="open()"><i nz-icon nzType="menu-unfold" nzTheme="outline"></i></button>
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="Projects" (nzOnClose)="close()"
+    [nzWidth]="218">
+    <div *ngFor="let project of projectNames">
+        <a class="project" [routerLink]="['/project', project.name]"
+            (click)="handleProjectChange(project.name)">{{project.name}}</a>
+    </div>
+    <div>
+        <a class="project" routerLink="/portfolio">Back to Portfolio</a>
+    </div>
+</nz-drawer>
