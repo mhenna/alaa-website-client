@@ -19,12 +19,12 @@ export class ProjectComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private service: ServiceService, private router: Router) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       this.projectName = params.get("projectName")
       this.selectedProject = params.get("projectName")
     })
-    this.originalProjectNames = await this.service.getOriginalProjectNames();
+    this.originalProjectNames = this.service.getOriginalProjectNames();
 
     this.populateProjectFiles(this.projectName);
   }
