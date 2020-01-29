@@ -13,6 +13,7 @@ export class ProjectComponent implements OnInit {
   selectedProject = "";
   projectFiles = [];
   pdfLink: any;
+  loading = false;
 
   originalProjectNames = {};
 
@@ -53,20 +54,16 @@ export class ProjectComponent implements OnInit {
       this.projectFiles.push(arr)
   }
 
-  downloadModel(model) {
-    window.open(model.model, "_blank")
-    // var blobData = this.convertBase64ToBlobData(model.model)
-    // if (window.navigator && window.navigator.msSaveOrOpenBlob) { //IE
-    //   window.navigator.msSaveOrOpenBlob(blobData, model.name);
-    // } else { // chrome
-    //   const blob = new Blob([blobData], { type: 'application/pdf' });
-    //   const url = window.URL.createObjectURL(blob);
-    //   const link = document.createElement('a');
-    //   link.href = url;
-    //   this.pdfLink = url;
-    //   link.download = model.name;
-    //   window.open(this.pdfLink, "_blank")
-    // }
+  async openPDF(fileName) {
+    this.loading = true;
+    try {
+      await this.service.getModel(fileName).then(res => {
+        var link = this.service.generatePDFLink(res.data, fileName);
+        window.open(link, "_blank");
+      });
+    } catch (err) {
+      alert("Error getting model, make sure name is correct");
+    }
+    this.loading = false;
   }
-
 }

@@ -50,6 +50,10 @@
     border-radius: 10px;
 }
 
+.file-name {
+    width: 75px;
+}
+
 .btn-1 {
     margin-right: 5%;
     text-align: center;
@@ -64,3 +68,12 @@
     border-radius: 10px;
     height: 75px;
 }
+
+.spinner {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    margin: 20px 0;
+  }

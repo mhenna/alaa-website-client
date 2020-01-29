@@ -22,7 +22,7 @@ export class PortfolioComponent implements OnInit {
     })
 
     var p_names = Array.from(this.projects);
-
+    p_names = p_names.sort();
     for (var i = 0; i < p_names.length; i++) {
       var obj = {
         "name" : p_names[i].toString().split(" ")[1],
