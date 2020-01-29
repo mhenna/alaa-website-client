@@ -1,0 +1,66 @@
+:host {
+  background-color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  transform: translate(0px, 50%);
+}
+
+.title-container {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  margin-top: 3%;
+  padding-left: 2%;
+}
+
+.title {
+  font-family: "Helvetica";
+  font-size: 68px;
+  text-align: center;
+}
+
+.sub-title {
+  font-family: "Helvetica";
+  font-size: 40px;
+  text-align: center;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border-color: black;
+  background-color: snow;
+}
+
+button.btn:hover {
+  background-color: #BEBEBE;
+  color: snow;
+}
+
+.btn-text {
+  color: black;
+  font-size: 20px;
+}
+
+.timeline {
+  margin-top: 2%;
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+.project {
+  color: black;
+}

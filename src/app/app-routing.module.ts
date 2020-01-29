@@ -12,6 +12,10 @@ const routes: Routes = [
     component: AdminComponent
   },
   {
+    path: '',
+    component: HomeComponent
+  },
+  {
     path: 'portfolio',
     component: PortfolioComponent
   },

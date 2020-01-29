@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service/service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,14 @@ import { ServiceService } from '../service/service.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  async ngOnInit() {
+  ngOnInit() {
+
+  }
+
+  navigateToPortfolio() {
+    this.router.navigate(['/portfolio']);
   }
 
 }

@@ -1,41 +1,62 @@
 :host {
-    background-color: white;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  background-color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.btn {
+  border-color: black;
+  background-color: snow;
+}
+
+button.btn:hover {
+  background-color: #bebebe;
+  color: snow;
+}
+
+.btn-text {
+  color: black;
+  font-size: 12px;
 }
 
 .wrapper {
-    transform: translate(0px, 50%);
+  transform: translate(0px, 50%);
 }
 
 .title-container {
-    width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-top: 3%;
-    padding-left: 2%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  margin-top: 3%;
+  padding-left: 2%;
 }
 
 .title {
-    font-family: "Helvetica";
-    font-size: 68px;
-    text-align: center;
+  font-family: "Helvetica";
+  font-size: 68px;
+  text-align: center;
 }
 
 .timeline {
-    margin-top: 2%;
-    width: 100%;
-    align-self: center;
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding-left: 2%;
+  margin-top: 2%;
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 2%;
 }
 
 .project {
-    color: black;
+  color: black;
 }
