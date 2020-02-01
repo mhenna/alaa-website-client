@@ -1,5 +1,5 @@
 <app-side-nav (projectNameChange)='handleProjectNameChange($event)'></app-side-nav>
-<nz-spin nzTip="Loading..." [nzSize]="largs" *ngIf="loading">
+<nz-spin nzTip="Loading..." [nzSize]="'large'" *ngIf="loading">
     <div class="wrapper">
         <div class="title-container">
             <h1 class="title">{{projectName}}</h1>
